@@ -72,8 +72,9 @@ class attention_block(nn.Module):
 
         k, v, q = self.tanh1(k), self.tanh2(v), self.sig1(q)
 
-        k, v, q = self.ln_2(k.permute(chan_norm)).permute(chan_norm), self.ln_3(v.permute(chan_norm)).permute(
-            chan_norm), self.ln_4(q.permute(chan_norm)).permute(chan_norm)
+        k, v, q = self.ln_2(k.permute(chan_norm)).permute(chan_norm), \
+                  self.ln_3(v.permute(chan_norm)).permute(chan_norm), \
+                  self.ln_4(q.permute(chan_norm)).permute(chan_norm)
 
         atn = (k - v) * q
 
@@ -83,7 +84,7 @@ class attention_block(nn.Module):
         x = self.el2(x)
 
         # If we want to use it to change the dimension
-        if self.residual == True:
+        if self.residual:
             input = self.reduce_residual(input)
 
         x = x + input

@@ -10,7 +10,7 @@ from PIL import Image
 from skimage.transform import resize
 from torch.utils.data import Dataset
 
-from fake_texts.imgaug_transformations import augmentations
+from dataset.fake_texts.imgaug_transformations import augmentations
 
 
 class hwrDataset(Dataset):
