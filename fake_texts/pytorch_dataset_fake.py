@@ -1,31 +1,17 @@
 import sys
 sys.path.append("fake_texts/") 
 #sys.path.append("/home/leander/AI/repos/gen_text/TextRecognitionDataGenerator/fonts") 
-import argparse
-import os, errno
+import os
 import random
-import string
-from tqdm import tqdm
 
 from string_generator import (
-    create_strings_from_dict,
-    create_strings_from_file,
     create_strings_from_wikipedia,
     create_strings_randomly
 )
 
 from data_generator import FakeTextDataGenerator
 
-import torch
-from torch.utils.data import DataLoader
-from torchvision import transforms
-import torchvision.datasets as datasets
-import matplotlib.pyplot as plt
-import imgaug as ia
-from imgaug import augmenters as iaa
 from imgaug_transformations import augmentations
-from skimage.transform import resize
-import cv2
 
 
 #Basically we want to add the
@@ -54,7 +40,6 @@ def load_fonts(lang):
 
 import numpy as np
 from nltk import word_tokenize
-import torch
 
 import torch
 from torch.utils import data

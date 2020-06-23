@@ -1,11 +1,10 @@
-import os
 import random
 
 from PIL import Image, ImageFilter
-
-from computer_text_generator import ComputerTextGenerator
 from background_generator import BackgroundGenerator
+from computer_text_generator import ComputerTextGenerator
 from distorsion_generator import DistorsionGenerator
+
 
 class FakeTextDataGenerator(object):
     @classmethod

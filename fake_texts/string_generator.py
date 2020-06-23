@@ -1,9 +1,10 @@
 import random
 import re
 import string
-import requests
 
+import requests
 from bs4 import BeautifulSoup
+
 
 def create_strings_from_file(filename, count):
     """

@@ -1,4 +1,3 @@
-import imgaug as ia
 from imgaug import augmenters as iaa
 sometimes_5 = lambda aug: iaa.Sometimes(0.5, aug)
 sometimes_1 = lambda aug: iaa.Sometimes(0.1, aug)

@@ -1,8 +1,8 @@
-import torch
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import torch
 
-    
+
 def wer(r, h):
     d = np.zeros((len(r)+1)*(len(h)+1), dtype=np.uint8)
     d = d.reshape((len(r)+1, len(h)+1))

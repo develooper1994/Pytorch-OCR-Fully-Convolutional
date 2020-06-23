@@ -1,6 +1,7 @@
 import random
 
-from PIL import Image, ImageColor, ImageFont, ImageDraw, ImageFilter
+from PIL import Image, ImageColor, ImageFont, ImageDraw
+
 
 class ComputerTextGenerator(object):
     @classmethod
